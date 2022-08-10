@@ -1,0 +1,30 @@
+
+2022/08/10 21:06:03 C:/Users/User_1/go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:250
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2022/08/10 21:06:03 C:/Users/User_1/go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:253
+[0.855ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'cart%' ORDER BY SCHEMA_NAME='cart' DESC,SCHEMA_NAME limit 1
+
+2022/08/10 21:06:03 R:/radya/project/project/project/pribadi/technical-test-telkom/6/main.go:49
+[0.498ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'cart' AND table_name = 'cart_produks' AND table_type = 'BASE TABLE'
+
+2022/08/10 21:06:03 C:/Users/User_1/go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:250
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2022/08/10 21:06:03 C:/Users/User_1/go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:253
+[0.998ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'cart%' ORDER BY SCHEMA_NAME='cart' DESC,SCHEMA_NAME limit 1
+
+2022/08/10 21:06:03 C:/Users/User_1/go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:163
+[0.000ms] [rows:-] SELECT * FROM `cart_produks` LIMIT 1
+
+2022/08/10 21:06:03 C:/Users/User_1/go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:181
+[11.900ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'cart' AND table_name = 'cart_produks' ORDER BY ORDINAL_POSITION
+
+2022/08/10 21:06:08 R:/radya/project/project/project/pribadi/technical-test-telkom/6/cart/repository/repo_cart.go:36
+[0.518ms] [rows:1] SELECT * FROM `cart_produks` WHERE kode_produk = 'string1' ORDER BY `cart_produks`.`kode_produk` LIMIT 1
+
+2022/08/10 21:06:08 R:/radya/project/project/project/pribadi/technical-test-telkom/6/cart/repository/repo_cart.go:52
+[2.991ms] [rows:1] UPDATE `cart_produks` SET `kode_produk`='string1',`kuantitas`=9 WHERE kode_produk = 'string1'
+
+2022/08/10 21:06:14 R:/radya/project/project/project/pribadi/technical-test-telkom/6/cart/repository/repo_cart.go:27
+[0.589ms] [rows:2] SELECT * FROM `cart_produks`

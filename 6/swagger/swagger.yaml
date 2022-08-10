@@ -1,0 +1,85 @@
+basePath: /
+definitions:
+  models.CartProduk:
+    properties:
+      kodeProduk:
+        type: string
+      kuantitas:
+        type: integer
+    type: object
+host: localhost:5000
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Echo Swagger technical-test-telkom API
+  version: "1.0"
+paths:
+  /api/cart:
+    get:
+      consumes:
+      - application/json
+      description: List.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.CartProduk'
+            type: array
+      summary: List.
+      tags:
+      - Cart
+    post:
+      consumes:
+      - application/json
+      description: Create.
+      parameters:
+      - description: request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.CartProduk'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+      summary: Create.
+      tags:
+      - Cart
+  /api/cart/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete.
+      parameters:
+      - description: kode produk
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+      summary: Delete.
+      tags:
+      - Cart
+schemes:
+- http
+swagger: "2.0"
