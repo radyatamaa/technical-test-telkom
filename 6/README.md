@@ -17,72 +17,18 @@ The explanation about this project's structure  can read from this medium's post
 
 ```bash
 #move to directory
-cd $GOPATH/src/github.com/bxcodec
+cd $GOPATH/src/github.com/radyatamaa
 
 # Clone into YOUR $GOPATH/src
-git clone https://ilyas_bashirah@bitbucket.org/bridce/technical-test-telkom.git
+git clone https://github.com/radyatamaa/technical-test-telkom.git
 
 #move to project
-cd technical-test-telkom
-
-# Test the code
-make test
+cd technical-test-telkom/6
 
 # Run Project
 go run main.go
 
+# Open Browser
+http://localhost:5000/
 
 ```
-
-Or with `docker-compose`
-
-```bash
-#move to directory
-cd $GOPATH/src/github.com/bxcodec
-
-# Clone into YOUR $GOPATH/src
-git clone https://ilyas_bashirah@bitbucket.org/bridce/technical-test-telkom.git
-
-#move to project
-cd technical-test-telkom
-
-# Build the docker image first
-make docker
-
-# Run the application
-make run
-
-# check if the containers are running
-docker ps
-
-# Execute the call
-curl localhost:5000/api/sample-module
-
-# Stop
-make stop
-```
-### Validation Unit Test Commit
-if you want to apply unit test validation on commit copy file "pre-commit" to folder ".git/hooks/"      
-
-### List Command
-                    
-Function  | Command
-------------- | -------------
-Update Swagger  | swag init -g main.go --output swagger
-Run All Unit Test  | make test 
-Docker Build  | make docker
-Docker Run  | make run 
-Docker Stop  | make stop
-Run All Unit Test  | make test 
-Build  | make engine
-
-### Standard Status Code 
-                    
-Description  | Code
-------------- | -------------
-Success  | 200
-Not Found  | 404 
-Conflict  | 409
-UnAuthorize  | 401 
-Bad Param Input  | 400
-Other  | 500 
